@@ -38,6 +38,17 @@ Saludos, este documento esta diseñado con la intencion de asistírlo el las ins
 - Del listado filtrado, identificar la Extension llamada **C#** por el autor **Microsoft**
 - Hacer click en el boton instalar
 
+# Crear Console App
+
+- En una terminal entrar el siguiente comando.
+```
+dotnet new console --framework net7.0
+```
+- Para ejecutar
+```
+dotnet run
+```
+
 # Manejo de argumentos
 - En C# 11, podemos acceder a los argumentos de la línea de comandos pasados a una aplicación de consola a través del parámetro args del método Main. Aquí hay un   ejemplo:
 - 
