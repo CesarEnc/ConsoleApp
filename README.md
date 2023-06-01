@@ -36,3 +36,16 @@ Saludos, este documento esta diseñado con la intencion de asistírlo el las ins
 - Desde la ruta de extensiones, escribir en la Barra de Busqueda localizada debajo del Titulo de extensiones la palabra **C#**
 - Del listado filtrado, identificar la Extension llamada **C#** por el autor **Microsoft**
 - Hacer click en el boton instalar
+
+# Cancelation Token implementation
+
+- Cuando la app este en ejecución puede precionar "Ctrl + C" para proceder a detener la applicación.
+```cs
+CancellationTokenSource cancellationToken = new();
+Console.CancelKeyPress += (_, e) =>
+{
+    e.Cancel = true; // prevent the process from terminating.
+    cancellationToken.Cancel();
+};
+await DoSomethingAsync(cancellationToken.Token)
+```
