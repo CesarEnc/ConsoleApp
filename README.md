@@ -17,9 +17,6 @@
 
 8 - Para verificar que la instalación se haya realizado correctamente, escribe el siguiente comando en la terminal: dotnet --version
 
-
-C#-Plugin-Tutorial
-
 # Pasos para instalar Plugin de C# dentro del Visual Studio Code (VSCode)
 
 - Abrir VSCode 
