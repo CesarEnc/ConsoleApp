@@ -49,3 +49,11 @@ Console.CancelKeyPress += (_, e) =>
 };
 await DoSomethingAsync(cancellationToken.Token)
 ```
+
+# Errores de Salida
+
+- Error-9: Error desconocida en funcionamiento de app, favor reportar a los administradores
+- Error-1: Argumento Invalido
+- Error-2: Servicio de "Drinks" no disponible
+
+

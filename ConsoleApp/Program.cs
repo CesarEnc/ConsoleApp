@@ -4,13 +4,25 @@
     CancellationTokenSource cancellationToken = new();
     Console.CancelKeyPress += (_, e) =>
     {
-        e.Cancel = true; // prevent the process from terminating.
+        Console.WriteLine("Canceling...");
+        e.Cancel = true;
         cancellationToken.Cancel();
     };
+
+    //Do Somthing ...
+
+    Console.WriteLine("End App");
 }
 catch (IOException e)
 {
-    TextWriter errorWriter = Console.Error;
-    errorWriter.WriteLine($"Error: {e.Message}");
+    Console.Error.WriteLine($"Error-{(int)Errors.InternalError}");
+    Console.Error.WriteLine($"Detail: {e.Message}");
     return;
+}
+
+enum Errors
+{
+    InternalError,
+    InvalidArgument,
+    UnaveilableApi
 }
