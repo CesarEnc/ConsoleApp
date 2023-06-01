@@ -1,6 +1,6 @@
 # ConsoleApp
 
-# These are the steps that we need to follow to install the dotnet sdk:
+# Pasos a seguir para instalar el sdk de dotnet:
 
 1 - Abre un navegador web y ve al sitio web oficial de .NET Core en https://dotnet.microsoft.com/download.
 
