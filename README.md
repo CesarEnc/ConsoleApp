@@ -20,8 +20,8 @@ Saludos, este documento esta diseñado con la intencion de asistírlo el las ins
 
 ## Pasos para Instalar VSCode
 
-- Ve a la página de Microsoft Visual Studio Code en Academic Software y haz clic en el botón _**Descargar Visual Studio Code**_ para descargar el archivo de instalación.
-- Abre el archivo de instalación .exe en tu carpeta de descargas para iniciar la instalación.
+- Ve a la página de Microsoft Visual Studio Code en Academic Software y haz clic en el botón _**Descargar Visual Studio Code**_(https://code.visualstudio.com/download) para descargar el archivo de instalación correspondiente a tu SO.
+- Abre el archivo de instalación en tu carpeta de descargas para iniciar la instalación.
 - Lee y acepta el acuerdo de licencia. Haz clic en Next para continuar.
 - Puedes cambiar la ubicación de la carpeta de instalación o mantener la configuración predeterminada. Haz clic en Next para continuar.
 - Elige si deseas cambiar el nombre de la carpeta de accesos directos en el menú Inicio o si no deseas instalar accesos directos en absoluto. Haz clic en Next.
