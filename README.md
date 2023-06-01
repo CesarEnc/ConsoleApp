@@ -15,6 +15,16 @@ Saludos, este documento esta diseñado con la intencion de asistírlo el las ins
 - Una vez completada la instalación, abre una ventana de terminal o línea de comandos en tu sistema operativo.
 - Para verificar que la instalación se haya realizado correctamente, escribe el siguiente comando en la terminal: dotnet --version
 
+# Pasos para Instalar VSCode
+
+- Ve a la página de Microsoft Visual Studio Code en Academic Software y haz clic en el botón 'Descargar Visual Studio Code' para descargar el archivo de instalación.
+- Abre el archivo de instalación .exe en tu carpeta de descargas para iniciar la instalación.
+- Lee y acepta el acuerdo de licencia. Haz clic en Next para continuar.
+- Puedes cambiar la ubicación de la carpeta de instalación o mantener la configuración predeterminada. Haz clic en Next para continuar.
+- Elige si deseas cambiar el nombre de la carpeta de accesos directos en el menú Inicio o si no deseas instalar accesos directos en absoluto. Haz clic en Next.
+- Selecciona las tareas adicionales, por ej. crear un icono en el escritorio o añadir opciones al menú contextual de Windows Explorer. Haz clic en Next.
+- El programa está instalado y listo para usar. Haz clic en Finish para finalizar la instalación y lanzar el programa.
+
 # Pasos para instalar Plugin de C# dentro del Visual Studio Code (VSCode)
 
 - Abrir VSCode 
