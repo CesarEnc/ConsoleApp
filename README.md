@@ -14,10 +14,11 @@ Saludos, este documento esta diseñado con la intencion de asistírlo el las ins
 - Durante la instalación, se te preguntará si deseas instalar componentes adicionales o herramientas. Puedes seleccionar las opciones que desees según tus necesidades.
 - Una vez completada la instalación, abre una ventana de terminal o línea de comandos en tu sistema operativo.
 - Para verificar que la instalación se haya realizado correctamente, escribe el siguiente comando en la terminal:
+
     ```.net
     dotnet --version
     ```
-
+    
 ## Pasos para Instalar VSCode
 
 - Ve a la página de Microsoft Visual Studio Code en Academic Software y haz clic en el botón _**Descargar Visual Studio Code**_(https://code.visualstudio.com/download) para descargar el archivo de instalación correspondiente a tu SO.
@@ -37,6 +38,20 @@ Saludos, este documento esta diseñado con la intencion de asistírlo el las ins
 - Del listado filtrado, identificar la Extension llamada **C#** por el autor **Microsoft**
 - Hacer click en el boton instalar
 
+# Manejo de argumentos
+- En C# 11, podemos acceder a los argumentos de la línea de comandos pasados a una aplicación de consola a través del parámetro args del método Main. Aquí hay un   ejemplo:
+- 
+  ![image](https://github.com/CesarEnc/ConsoleApp/assets/83259031/b16dce9a-4b09-4d57-90de-fc5f97e5dc04)
+  
+  En este imagen capturamos los parametros y se los pasamos a una funcion que los validara.
+
+# Features unicos de C# 11
+- Los patrones de lista amplían la coincidencia de patrones para hacer coincidir secuencias de elementos en una lista o una matriz. Por ejemplo, la secuencia es     [1, 2, 3] es verdadera cuando la secuencia es una matriz o una lista de tres enteros (1, 2 y 3). Puede unir elementos utilizando cualquier patrón, incluidos       patrones constantes, de tipo, de propiedad y relacionales. El patrón de descarte (_) coincide con cualquier elemento individual y el nuevo patrón de rango (..)   coincide con cualquier secuencia de cero o más elementos
+
+  ![image](https://github.com/CesarEnc/ConsoleApp/assets/83259031/3d850bb9-f421-4208-83ed-72cdc721508d)
+  
+  Aqui podemos ver como usamos list pattern para comprobar si una lista de strings que nos pasan como args esta vacia o no.
+  
 # Cancelation Token implementation
 
 - Cuando la app este en ejecución puede precionar "Ctrl + C" para proceder a detener la applicación.
@@ -49,3 +64,4 @@ Console.CancelKeyPress += (_, e) =>
 };
 await DoSomethingAsync(cancellationToken.Token)
 ```
+
