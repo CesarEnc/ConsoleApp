@@ -50,7 +50,7 @@ dotnet run
 ```
 
 # Manejo de argumentos
-- En C# 11, podemos acceder a los argumentos de la línea de comandos pasados a una aplicación de consola a través del parámetro args del método Main. Aquí hay un   ejemplo:
+- En C# 11, podemos acceder a los argumentos de la línea de comandos pasados a una aplicación de consola a través del parámetro args del método Main.
   
 
 # Features unicos de C# 11
@@ -119,6 +119,69 @@ enum Errors
     InternalError,
     InvalidArgument,
     UnaveilableApi
+}
+```
+
+# Consumir API de drinks
+- Modelo de lo que recibiremos desde el response del API
+-  Metodo para consumir el API
+- Validar argumentos y ejecutar el metodo de listar si los argumentos enviados son validos
+```cs
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool isValidArg = ContainsValidArguments(args);
+            if (isValidArg) 
+            {
+                if (args.Contains("list")) 
+                {
+                    Console.WriteLine(GetDrinks());
+                }
+            }
+                
+            else 
+                Console.WriteLine("It is not a valid argument")
+        }
+
+        private static bool ContainsValidArguments(string[] args)
+        {
+            if (args is not [])
+                return args.Contains("list") || args.Contains("version");
+            return false;
+        }
+
+        private static List<Drink> GetDrinks() 
+        {
+            var client = new HttpClient();
+                    var request = new HttpRequestMessage 
+                    {
+                        Method = HttpMethod.Get,
+                        RequestUri = new Uri("https://the-cocktail-db.p.rapidapi.com/list.php?g=list"),
+                        Headers =
+                        {
+                            { "X-RapidAPI-Key", "SIGN-UP-FOR-KEY" }, //use your own API KEY
+                            { "X-RapidAPI-Host", "the-cocktail-db.p.rapidapi.com" }, //use yout own Rapi Host
+                        },
+                    };
+
+                    using (var response = await client.SendAsync(request))
+                    {
+                        response.EnsureSuccessStatusCode();
+                        var body = await response.Content.ReadAsAsync<List<Drink>>();
+                        return body;
+                    }
+        }
+    }
+
+    public class Drink 
+    {
+        public int idDrink { get; set; }
+        public string strAlcoholic {get; set; }
+        public string strCategory {get; set;}
+    }
 }
 ```
 
