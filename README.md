@@ -124,6 +124,9 @@ enum Errors
 
 # Crear archivos csv basado en resultado de Drinks
 
+El archivo sera generado en la ruta:
+> "C:\Temp\drinks.csv"
+
 ```cs
 class Drink
 {
@@ -146,6 +149,6 @@ foreach (var element in list)
 {
     csv.AppendLine("elemnt");
 }
-System.IO.File.WriteAllText(@"C:\Temp\csc.txt", csv.ToString());
+System.IO.File.WriteAllText(@"C:\Temp\drinks.csv", csv.ToString());
 
 ```
