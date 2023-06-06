@@ -10,6 +10,14 @@
     };
 
     //Do Somthing ...
+    List<Drink> list = GetDrinks();
+    System.Text.StringBuilder csv = new System.Text.StringBuilder();
+    csv.AppendLine("header");
+    foreach (Drink element in list)
+    {
+        csv.AppendLine("elemnt");
+    }
+    File.WriteAllText(@"C:\Temp\csc.txt", csv.ToString());
 
     Console.WriteLine("End App");
 }
@@ -20,9 +28,21 @@ catch (IOException e)
     return;
 }
 
+List<Drink> GetDrinks()
+{
+    return new List<Drink>();
+}
+
 enum Errors
 {
     InternalError,
     InvalidArgument,
     UnaveilableApi
+}
+
+class Drink
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public string Descripcion { get; set; }
 }
