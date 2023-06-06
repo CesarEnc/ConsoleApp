@@ -191,26 +191,12 @@ El archivo sera generado en la ruta:
 > "C:\Temp\drinks.csv"
 
 ```cs
-class Drink
-{
-    public string Id { get; set; }
-    public string Name { get; set; }
-    public string Descripcion { get; set; }
-}
-
-List<Drink> GetDrinks()
-{
-    //Resultado de Api
-}
-
-//To Use on Main Method
-
 List<Drink> list = GetDrinks();
 var csv= new StringBuilder();
-csv.AppendLine("header");
+csv.AppendLine("Id,Alcoholic,Category");
 foreach (var element in list)
 {
-    csv.AppendLine("elemnt");
+    csv.AppendLine($"{element.idDrink},{element.strAlcoholic},{element.strCategory}");
 }
 System.IO.File.WriteAllText(@"C:\Temp\drinks.csv", csv.ToString());
 
