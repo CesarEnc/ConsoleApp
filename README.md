@@ -83,3 +83,50 @@ await DoSomethingAsync(cancellationToken.Token)
 - Error-2: Servicio de "Drinks" no disponible
 
 
+```cs
+try
+{
+    //Main Code
+}
+catch (Exception e)
+{
+    Console.Error.WriteLine($"Error-{(int)Errors.InternalError}");
+    Console.Error.WriteLine($"Detail: {e.Message}");
+    return;
+}
+
+enum Errors
+{
+    InternalError,
+    InvalidArgument,
+    UnaveilableApi
+}
+```
+
+# Crear archivos csv basado en resultado de Drinks
+
+```cs
+class Drink
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public string Descripcion { get; set; }
+}
+
+List<Drink> GetDrinks()
+{
+    //Resultado de Api
+}
+
+//To Use on Main Method
+
+List<Drink> list = GetDrinks();
+var csv= new StringBuilder();
+csv.AppendLine("header");
+foreach (var element in list)
+{
+    csv.AppendLine("elemnt");
+}
+System.IO.File.WriteAllText(@"C:\Temp\csc.txt", csv.ToString());
+
+```
